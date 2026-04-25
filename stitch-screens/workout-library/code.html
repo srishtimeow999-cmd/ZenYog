@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&amp;family=Spectral:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#231b00",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "primary-fixed-dim": "#00dbe9",
+                    "on-primary-fixed-variant": "#004f54",
+                    "inverse-surface": "#2a3233",
+                    "secondary-fixed": "#e1e3e4",
+                    "outline-variant": "#b9cacb",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#fed639",
+                    "inverse-primary": "#00dbe9",
+                    "on-surface": "#151d1e",
+                    "surface-bright": "#f3fbfb",
+                    "primary": "#006970",
+                    "secondary": "#5c5f60",
+                    "outline": "#6a7a7b",
+                    "secondary-container": "#e1e3e4",
+                    "inverse-on-surface": "#eaf2f3",
+                    "background": "#f3fbfb",
+                    "on-primary-container": "#006970",
+                    "primary-container": "#00f0ff",
+                    "surface-variant": "#dce4e5",
+                    "tertiary-fixed-dim": "#eac324",
+                    "on-secondary-fixed-variant": "#454748",
+                    "on-primary-fixed": "#002022",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#554500",
+                    "on-surface-variant": "#3b494b",
+                    "surface-tint": "#006970",
+                    "surface-dim": "#d3dcdc",
+                    "primary-fixed": "#7df4ff",
+                    "surface-container-low": "#edf5f6",
+                    "surface-container-highest": "#dce4e5",
+                    "on-background": "#151d1e",
+                    "on-secondary-container": "#626566",
+                    "on-error": "#ffffff",
+                    "surface-container": "#e7eff0",
+                    "secondary-fixed-dim": "#c5c7c8",
+                    "on-secondary-fixed": "#191c1d",
+                    "tertiary-fixed": "#ffe179",
+                    "surface": "#f3fbfb",
+                    "on-tertiary-container": "#715d00",
+                    "tertiary": "#715c00",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#e1eaea"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "element-gap": "16px",
+                    "unit": "8px",
+                    "container-max": "1280px",
+                    "section-padding": "80px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Cinzel Decorative"],
+                    "h2": ["Cinzel Decorative"],
+                    "h1": ["Cinzel Decorative"],
+                    "body-md": ["Spectral"],
+                    "label-caps": ["Spectral"],
+                    "body-lg": ["Spectral"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                    "h2": ["24px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "h1": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "body-lg": ["20px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .aether-glass {
+            backdrop-filter: blur(20px);
+            background-color: rgba(255, 255, 255, 0.7);
+            border: 0.5px solid #E4E4E7;
+        }
+        .hairline-border {
+            border: 0.5px solid #E4E4E7;
+        }
+        .aether-shadow {
+            shadow: 0px 20px 40px rgba(0, 0, 0, 0.03);
+        }
+        .gradient-fade {
+            background: linear-gradient(to right, transparent, #E4E4E7, transparent);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-container/30">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-2xl border-b-[0.5px] border-slate-200/50">
+<nav class="flex justify-between items-center w-full px-20 py-8 max-w-[1440px] mx-auto">
+<div class="text-2xl font-light tracking-[0.3em] text-slate-900">Aether Wellness</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="font-serif tracking-widest uppercase text-xs text-slate-400 hover:text-cyan-400 transition-colors duration-500" href="#">Sanctuary</a>
+<a class="font-serif tracking-widest uppercase text-xs text-cyan-500 border-b border-cyan-400/50 pb-1" href="#">Rituals</a>
+<a class="font-serif tracking-widest uppercase text-xs text-slate-400 hover:text-cyan-400 transition-colors duration-500" href="#">Nourish</a>
+<a class="font-serif tracking-widest uppercase text-xs text-slate-400 hover:text-cyan-400 transition-colors duration-500" href="#">Wisdom</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="font-serif tracking-widest uppercase text-xs text-primary hover:text-cyan-400 transition-all duration-700">Connect</button>
+<div class="w-10 h-10 rounded-full bg-slate-100 overflow-hidden hairline-border">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="close-up portrait of a woman with calm expression, soft natural lighting, ethereal aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuFJCJ5KG9L7GNQ0QIXPwmZFloajiV7v3qH7dmRipsn8wsAnysDP13Mxswe26AApkMF7QQF5bbmUTuk55e2aQXfcBbFH1bq_1aU6pHlsmHMTqA1SKqbrHh7kh5DbydmnaXB7MStgBYsjK_EUsTyliUALgigumai9bd8jRWI7Dj1X9nbhTC0pePaD4kFZKbZU9lweKk1yXZ9JgcMQsLZGhW-Qc_P_ow8hDVd9BGEh-bCYYyKmqwTfQqOD0z9MoztOJoWoVzAESIL08"/>
+</div>
+</div>
+</nav>
+</header>
+<main class="pt-40 pb-20 max-w-[1440px] mx-auto px-20">
+<!-- Hero Section -->
+<section class="mb-24 text-center">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">The Ritual Library</span>
+<h1 class="font-display-lg text-display-lg text-slate-900 mb-8 max-w-4xl mx-auto">Elevate your physical vessel through curated movement.</h1>
+<div class="w-32 h-px gradient-fade mx-auto mb-8"></div>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto italic">Science-led methodologies intertwined with ancient flow. Discover the ritual that resonates with your current state of being.</p>
+</section>
+<!-- Category Filter -->
+<div class="flex justify-center gap-4 mb-16">
+<button class="px-8 py-3 bg-slate-900 text-white font-label-caps text-label-caps rounded-full hover:bg-slate-800 transition-all">All Rituals</button>
+<button class="px-8 py-3 bg-white hairline-border text-slate-600 font-label-caps text-label-caps rounded-full hover:border-primary/50 transition-all">Yoga</button>
+<button class="px-8 py-3 bg-white hairline-border text-slate-600 font-label-caps text-label-caps rounded-full hover:border-primary/50 transition-all">Kinetic Training</button>
+<button class="px-8 py-3 bg-white hairline-border text-slate-600 font-label-caps text-label-caps rounded-full hover:border-primary/50 transition-all">Recovery</button>
+</div>
+<!-- Workout Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Card 1: Yoga -->
+<div class="group relative flex flex-col bg-white aether-glass overflow-hidden transition-all duration-700 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="woman practicing advanced yoga pose in a minimalist white studio with soft dramatic shadows and airy atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL3wn2NeAvbsrhmWvEvybtFaTK7XSrO3E-U2KAwL53EUMD69gAsZwWZsMv6_H2YA4wmgQr0aLpY-Q2YG2lI6qHiHsa6mZRpdNEltdLa9cwwBsenANbJMLTQpKvMDxbZG6UDLmVorV0rZSAGJocm7bpIKzUqcqgSwSTDsik808pPncF6VRm_5U2ReDIcep1um-zzMofkMOppIdfNayZJ8DkUXGdmV7ZSDjqAj7nyWwjP_GVZAlFsH94etagoX-rkY5TWHmtw3KSopo"/>
+<div class="absolute top-6 left-6">
+<span class="px-3 py-1 bg-white/90 backdrop-blur-md text-[10px] font-label-caps tracking-widest text-slate-900 uppercase">Yoga</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-h2 text-h2 text-slate-900">Celestial Flow</h3>
+<div class="flex items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-label-caps text-[10px]">45 MIN</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-8 line-clamp-2">A fluid sequence designed to align spinal energy and expand conscious breathwork.</p>
+<div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+<span class="font-label-caps text-[10px] text-slate-500 uppercase">Moderate Intensity</span>
+</div>
+<button class="group/btn flex items-center gap-2 font-label-caps text-label-caps text-primary hover:text-cyan-500 transition-colors">
+                            Begin Ritual
+                            <span class="material-symbols-outlined text-base transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Kinetic -->
+<div class="group relative flex flex-col bg-white aether-glass overflow-hidden transition-all duration-700 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="focused person lifting kettlebell in a high-end minimalist gym setting with limestone walls and soft overhead lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl5Z56STKCWAo6H0RKoQphLn4pfugZ6mVM1lk4krRJ_OlOawUBzqh8EiIudSHyku569GnpqGRmvPDYmKNHVPQipjWhaBeWmTl4PDCIOnMzOhYNiEDhr_w7HSArCD64Eh1K2KyBo07hXWr15MwXfa2usg1iZ53XnINgI-4MPsetLTn1ymbY9DRV73lpO7-rtuyFs3ftHz7N6sVLSCfsU4BRQoxJ6FIXzNJ-rCZZ6KNSV7I_swhc1C9fyVWc0ZqdRhe9mkP2het8lhM"/>
+<div class="absolute top-6 left-6">
+<span class="px-3 py-1 bg-white/90 backdrop-blur-md text-[10px] font-label-caps tracking-widest text-slate-900 uppercase">Kinetic</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-h2 text-h2 text-slate-900">Primal Force</h3>
+<div class="flex items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-label-caps text-[10px]">30 MIN</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-8 line-clamp-2">High-intensity functional movements to activate the nervous system and build core density.</p>
+<div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-red-400"></span>
+<span class="font-label-caps text-[10px] text-slate-500 uppercase">High Intensity</span>
+</div>
+<button class="group/btn flex items-center gap-2 font-label-caps text-label-caps text-primary hover:text-cyan-500 transition-colors">
+                            Begin Ritual
+                            <span class="material-symbols-outlined text-base transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Recovery -->
+<div class="group relative flex flex-col bg-white aether-glass overflow-hidden transition-all duration-700 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="calm woman lying on a mat with eyes closed, soft silk eye mask, surrounded by gentle candlelight and white linen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Vjgf2GsHWZ3D4sskgOiU79cqPTGAS-RCSoUB9NYAcZzqZAL0K7pEL_-60jA2u0UQL1adefthfuK_ULSW9ak2voluue2aw4rpG5qU7i33t2NgUWaLxxjP1ieJotwVDaj4PNW6qIkrUtu4fcvEUWAhGllfEaHei7Jv2-ERosUH7qk-tpMaxh_0j_suWBGBrMIfg1Xb-_KA2aQ390ohQ2HMvNRxqJnR6AjBdey9gpJQg0mE2GDggs2bCmsyMEMyyckjptiSU7DPdzY"/>
+<div class="absolute top-6 left-6">
+<span class="px-3 py-1 bg-white/90 backdrop-blur-md text-[10px] font-label-caps tracking-widest text-slate-900 uppercase">Recovery</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-h2 text-h2 text-slate-900">Lunar Stillness</h3>
+<div class="flex items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-label-caps text-[10px]">20 MIN</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-8 line-clamp-2">A restorative sequence of deep holds and meditation to facilitate cellular regeneration.</p>
+<div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span class="font-label-caps text-[10px] text-slate-500 uppercase">Low Intensity</span>
+</div>
+<button class="group/btn flex items-center gap-2 font-label-caps text-label-caps text-primary hover:text-cyan-500 transition-colors">
+                            Begin Ritual
+                            <span class="material-symbols-outlined text-base transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4: Kinetic -->
+<div class="group relative flex flex-col bg-white aether-glass overflow-hidden transition-all duration-700 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="person doing bodyweight training in sunlit courtyard with minimalist architecture and palm shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtNCLYVjFR-WX7wNrfpGO1AlOp8mBEEXX9sdpdpKKy2_IU256h8kGml88mY4a0sUDt7CTVbKlX7a5LgrDmG5PS3yWkPz9THSKuoNC0unoBhywNSZyVYxVLDZ0-hAUfHefU6s3Uol4RdNJOcqaqi3EbEOset6nbtMYN1cpYQqOU_ZvTXS3pkOCef-vx-1YCtIjuS1L0Y-dfcAG3qLShNcMwPm9ofo7_hkdoesVSZhw-dQxA-SXYnmOfgDWIGBAqgWgGgNgKfIsgmBQ"/>
+<div class="absolute top-6 left-6">
+<span class="px-3 py-1 bg-white/90 backdrop-blur-md text-[10px] font-label-caps tracking-widest text-slate-900 uppercase">Kinetic</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-h2 text-h2 text-slate-900">Solar Endurance</h3>
+<div class="flex items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-label-caps text-[10px]">60 MIN</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-8 line-clamp-2">Metabolic conditioning through sustained rhythmic exertion and structural loading.</p>
+<div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-red-400"></span>
+<span class="font-label-caps text-[10px] text-slate-500 uppercase">High Intensity</span>
+</div>
+<button class="group/btn flex items-center gap-2 font-label-caps text-label-caps text-primary hover:text-cyan-500 transition-colors">
+                            Begin Ritual
+                            <span class="material-symbols-outlined text-base transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 5: Yoga -->
+<div class="group relative flex flex-col bg-white aether-glass overflow-hidden transition-all duration-700 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="minimalist yoga setting with two wooden blocks and a white mat on polished concrete floor with soft window light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOJincX-ije7_r5fqmCSdINlzJeYLWr4Mr8do06s6OgdJBg2L_njEa9iZmH5lWMg4VmRJQy6JDgZdCpqjhlSPM3ex1mav2FTGSz5z3PNdxjYmZVE8sKdHIYg5nS13s7stH326NJnwX0CydXDw3MSBybd59MHE94qIpH8IWklv1bVocPN2SyGqdUgKWVcKslGmbAqZm4VsjhkBsY_LHbxlCeHEMLR-DmidYjUA3LlX_OaZX_Oj78_gL4yPrqKetU69mgPDsTGN7jkU"/>
+<div class="absolute top-6 left-6">
+<span class="px-3 py-1 bg-white/90 backdrop-blur-md text-[10px] font-label-caps tracking-widest text-slate-900 uppercase">Yoga</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-h2 text-h2 text-slate-900">Etheric Balance</h3>
+<div class="flex items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-label-caps text-[10px]">40 MIN</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-8 line-clamp-2">Proprioceptive training focused on stability, grounding, and vertical alignment.</p>
+<div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+<span class="font-label-caps text-[10px] text-slate-500 uppercase">Moderate Intensity</span>
+</div>
+<button class="group/btn flex items-center gap-2 font-label-caps text-label-caps text-primary hover:text-cyan-500 transition-colors">
+                            Begin Ritual
+                            <span class="material-symbols-outlined text-base transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 6: Recovery -->
+<div class="group relative flex flex-col bg-white aether-glass overflow-hidden transition-all duration-700 hover:-translate-y-2">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="close-up of essential oil diffusers and smooth river stones in a bright minimalist bathroom with steam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOQMbtyJi5P1EQMszpleZ4E2-NL3Wd7I7Nor49psg1UgHnoEXExZQW-ngdUKW1RGM2R-yiWHy9-jNstj45HgfeL2gLHOCrkrj29kkvOYqy-oE1yTPJwshTWKhup9oigz58r79utFm5zH3dFVVxaYygF9WN12rUEgY7oByZl6HcmoOlAGkHeMjQNCNhq-S9cLNVqOMj2IfoWKbvGvc383GgA49tpo9Sl2yBJrjHJOzN6oS3FuYh6ISTggPkx_t78tMfYHe6kpfjc50"/>
+<div class="absolute top-6 left-6">
+<span class="px-3 py-1 bg-white/90 backdrop-blur-md text-[10px] font-label-caps tracking-widest text-slate-900 uppercase">Recovery</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-h2 text-h2 text-slate-900">Aether Unwind</h3>
+<div class="flex items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="font-label-caps text-[10px]">15 MIN</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-8 line-clamp-2">Gentle myofascial release and parasympathetic activation to close the day.</p>
+<div class="mt-auto pt-6 border-t border-slate-100 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span class="font-label-caps text-[10px] text-slate-500 uppercase">Low Intensity</span>
+</div>
+<button class="group/btn flex items-center gap-2 font-label-caps text-label-caps text-primary hover:text-cyan-500 transition-colors">
+                            Begin Ritual
+                            <span class="material-symbols-outlined text-base transition-transform group-hover/btn:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white border-t-[0.5px] border-slate-100 mt-20">
+<div class="flex flex-col items-center gap-16 py-24 px-20 max-w-7xl mx-auto">
+<div class="text-lg font-light tracking-widest text-slate-900 uppercase">Aether Wellness</div>
+<div class="flex gap-12">
+<a class="font-serif text-sm tracking-loose text-slate-400 hover:text-cyan-500 transition-colors duration-300" href="#">About Us</a>
+<a class="font-serif text-sm tracking-loose text-slate-400 hover:text-cyan-500 transition-colors duration-300" href="#">Meal Planner</a>
+<a class="font-serif text-sm tracking-loose text-slate-400 hover:text-cyan-500 transition-colors duration-300" href="#">Workout Library</a>
+<a class="font-serif text-sm tracking-loose text-slate-400 hover:text-cyan-500 transition-colors duration-300" href="#">Contact Us</a>
+</div>
+<div class="w-full h-px gradient-fade"></div>
+<p class="font-serif text-sm tracking-loose text-slate-400">© 2024 Aether Wellness. Transcendent Minimalism.</p>
+</div>
+</footer>
+</body></html>
