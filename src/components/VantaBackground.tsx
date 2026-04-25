@@ -65,8 +65,8 @@ export default function VantaBackground() {
     <div className="fixed inset-0 -z-20 pointer-events-none overflow-hidden">
       <div 
         ref={vantaRef} 
-        className="w-full h-full opacity-40"
-        style={{ filter: 'contrast(1.1) brightness(1.1)' }}
+        className="w-full h-full opacity-40 relative"
+        style={{ filter: 'contrast(1.1) brightness(1.1)', position: 'relative' }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-surface/20 to-surface/80" />
       <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] bg-primary/5 blur-[120px] animate-liquid" />
