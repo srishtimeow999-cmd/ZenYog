@@ -22,7 +22,7 @@ const spectral = Spectral({
 });
 
 export const metadata: Metadata = {
-  title: "Aether Wellness",
+  title: "ZenYog",
   description: "Transcendent Minimalist wellness experience combining modern science with ancient wisdom.",
 };
 
