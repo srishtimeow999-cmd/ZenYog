@@ -1,4 +1,4 @@
-# Aether Wellness - Design System
+# ZenYog - Design System
 
 ## Project Info
 - **Title:** Design System Implementation
